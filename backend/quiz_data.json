@@ -1,0 +1,112 @@
+{
+    "questions": [
+        {
+            "id": "gender",
+            "section": "Личные данные",
+            "section_uz": "Shaxsiy ma'lumotlar",
+            "section_en": "Personal Data",
+            "label": "Ваш пол:",
+            "label_uz": "Jinsingiz:",
+            "label_en": "Your gender:",
+            "type": "options",
+            "placeholder": "",
+            "placeholder_uz": "",
+            "placeholder_en": "",
+            "options": [
+                {
+                    "id": "female",
+                    "text": "Женщина",
+                    "text_uz": "Ayol",
+                    "text_en": "Woman"
+                },
+                {
+                    "id": "male",
+                    "text": "Мужчина",
+                    "text_uz": "Erkak",
+                    "text_en": "Man"
+                }
+            ],
+            "gender": "both",
+            "multiple": false,
+            "order": 0
+        },
+        {
+            "id": "meds",
+            "section": "🏥 ШАГ 10: ЗДОРОВЬЕ",
+            "section_uz": "🏥 10-QADAM: SALOMATLIK",
+            "section_en": "🏥 STEP 10: HEALTH",
+            "label": "Принимаете ли медикаменты постоянно?",
+            "label_uz": "Doimiy ravishda dori-darmonlar qabul qilasizmi?",
+            "label_en": "Do you take medications constantly?",
+            "type": "options",
+            "placeholder": "",
+            "placeholder_uz": "",
+            "placeholder_en": "",
+            "options": [
+                {
+                    "id": "yes",
+                    "text": "Да",
+                    "text_uz": "Ha",
+                    "text_en": "Yes"
+                },
+                {
+                    "id": "no",
+                    "text": "Нет",
+                    "text_uz": "Yo'q",
+                    "text_en": "No"
+                }
+            ],
+            "gender": "both",
+            "multiple": false,
+            "order": 1
+        },
+        {
+            "id": "source",
+            "section": "📢 ШАГ 12: ИСТОЧНИКИ",
+            "section_uz": "📢 12-QADAM: MANBALAR",
+            "section_en": "📢 STEP 12: SOURCES",
+            "label": "Откуда вы узнали о HESSA?",
+            "label_uz": "HESSA haqida qayerdan bildingiz?",
+            "label_en": "Where did you hear about HESSA?",
+            "type": "options",
+            "placeholder": "",
+            "placeholder_uz": "",
+            "placeholder_en": "",
+            "options": [
+                {
+                    "id": "friend",
+                    "text": "Порекомендовал близкий человек",
+                    "text_uz": "Yaqin insonim tavsiya qildi",
+                    "text_en": "Recommended by a close person"
+                },
+                {
+                    "id": "spec",
+                    "text": "Совет специалиста",
+                    "text_uz": "Mutaxassis maslahati",
+                    "text_en": "Specialist's advice"
+                },
+                {
+                    "id": "tv",
+                    "text": "Увидела по ТВ",
+                    "text_uz": "Televizorda ko'rdim",
+                    "text_en": "Saw on TV"
+                },
+                {
+                    "id": "internet",
+                    "text": "Нашла в интернете",
+                    "text_uz": "Internetdan topdim",
+                    "text_en": "Found on the Internet"
+                },
+                {
+                    "id": "unknown",
+                    "text": "Не помню источник",
+                    "text_uz": "Manba esimda yo'q",
+                    "text_en": "Don't remember the source"
+                }
+            ],
+            "gender": "both",
+            "multiple": false,
+            "order": 2
+        }
+    ]
+}

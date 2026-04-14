@@ -1,0 +1,84 @@
+{
+    "hero": {
+        "heading": "ЧИСТОТА. НАУКА. <br /> ВАША ЭНЕРГИЯ.",
+        "heading_uz": "TOZALIK. FAN. <br /> SIZNING ENERGIYANGIZ.",
+        "heading_en": "PURITY. SCIENCE. <br /> YOUR ENERGY.",
+        "desc_left": "HESSA родилась из стремления переосмыслить подход к здоровью. Мы создаем продукты, где каждый компонент клинически оправдан, а формула направлена на максимальное усвоение организма.",
+        "desc_left_uz": "HESSA salomatlikka yondashuvni qayta ko'rib chiqish istagidan tug'ildi. Biz har bir komponenti klinik jihatdan asoslangan va maksimal so'rilishga yo'naltirilgan mahsulotlarni yaratamiz.",
+        "desc_left_en": "HESSA was born from a desire to rethink the approach to health. We create products where every component is clinically justified, and the formula is aimed at maximum absorption by the body.",
+        "desc_right": "Мы верим в доказательную медицину и полную прозрачность. Используя только премиальное сырье, мы гарантируем, что ваш путь к долголетию начинается с безупречного качества.",
+        "desc_right_uz": "Biz dalillarga asoslangan tibbiyot va to'liq shaffoflikka ishonamiz. Faqat premium xomashyolardan foydalangan holda, biz sizning salomatligingiz mukammal sifatdan boshlanishini kafolatlaymiz.",
+        "desc_right_en": "We believe in evidence-based medicine and full transparency. Using only premium raw materials, we ensure that your path to longevity begins with impeccable quality.",
+        "image": "http://127.0.0.1:8000/static/uploads/756feff4-8c67-4a10-afca-78be3c61c663.jpeg"
+    },
+    "metrics": [
+        {
+            "id": "1",
+            "title": "4+ года",
+            "title_uz": "4+ yil",
+            "title_en": "4+ years",
+            "text": "Собственное высокотехнологичное производство в Узбекистане",
+            "text_uz": "O'zbekistonda o'z yuqori texnologiyali ishlab chiqarish",
+            "text_en": "Own high-tech production in Uzbekistan"
+        },
+        {
+            "id": "2",
+            "title": "30K+",
+            "title_uz": "30K+",
+            "title_en": "30K+",
+            "text": "Довольных клиентов по всему миру",
+            "text_uz": "Butun dunyo bo'ylab mamnun mijozlar",
+            "text_en": "Happy clients worldwide"
+        },
+        {
+            "id": "3",
+            "title": "60+",
+            "title_uz": "60+",
+            "title_en": "60+",
+            "text": "Индивидуальных формул от экспертов-нутрициологов",
+            "text_uz": "Mutaxassis nutratsiologlardan shaxsiy formulalar",
+            "text_en": "Individual formulas from expert nutritionists"
+        },
+        {
+            "id": "4",
+            "title": "100%",
+            "title_uz": "100%",
+            "title_en": "100%",
+            "text": "Сертифицированное сырье GMP стандарта",
+            "text_uz": "GMP standartidagi sertifikatlangan xomashyo",
+            "text_en": "Certified raw materials of GMP standard"
+        }
+    ],
+    "values": [
+        {
+            "id": "1",
+            "title": "Безопасность",
+            "title_uz": "Xavfsizlik",
+            "title_en": "Safety",
+            "desc": "Бескомпромиссный контроль качества. Мы проводим лабораторную проверку каждой партии, чтобы вы были уверены в результате.",
+            "desc_uz": "Murosasiz sifat nazorati. Siz natijaga amin bo'lishingiz uchun biz har bir partiyani laboratoriya tekshiruvidan o'tkazamiz.",
+            "desc_en": "Uncompromising quality control. We conduct laboratory testing of each batch so that you can be confident in the result.",
+            "icon": "Shield"
+        },
+        {
+            "id": "2",
+            "title": "Прозрачность",
+            "title_uz": "Shaffoflik",
+            "title_en": "Transparency",
+            "desc": "Мы рассказываем всё о составах и происхождении ингредиентов, опираясь на принципы доказательной медицины.",
+            "desc_uz": "Biz dalillarga asoslangan tibbiyot tamoyillariga tayangan holda tarkiblar va ingredientlarning kelib chiqishi haqida hamma narsani aytib beramiz.",
+            "desc_en": "We tell everything about the formulations and origin of ingredients, based on the principles of evidence-based medicine.",
+            "icon": "Microscope"
+        },
+        {
+            "id": "3",
+            "title": "Результат",
+            "title_uz": "Natija",
+            "title_en": "Result",
+            "desc": "Фокус на биодоступности. Наши комплексы спроектированы так, чтобы нутриенты работали в синергии для вашего самочувствия.",
+            "desc_uz": "Bio-moslashuvchanlikka e'tibor. Bizning komplekslarimiz nutriyentlar salomatligingiz uchun sinergiyada ishlashi uchun mo'ljallangan.",
+            "desc_en": "Focus on bioavailability. Our complexes are designed so that nutrients work in synergy for your well-being.",
+            "icon": "Zap"
+        }
+    ]
+}

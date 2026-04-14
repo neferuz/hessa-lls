@@ -1,0 +1,128 @@
+{
+    "slides": [
+        {
+            "id": 1,
+            "headline": "\u0412\u0438\u0442\u0430\u043c\u0438\u043d\u044b \u043d\u0430 \u043a\u0430\u0436\u0434\u044b\u0439 \u0434\u0435\u043d\u044c",
+            "headline_uz": "Har kunlik vitaminlar",
+            "headline_en": "Daily Vitamins",
+            "descriptionLeft": "\u041f\u043e\u0434\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0432\u0438\u0442\u0430\u043c\u0438\u043d\u044b \u0438 \u0434\u043e\u0431\u0430\u0432\u043a\u0438 \u0434\u043b\u044f \u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u043e\u0433\u043e \u0440\u0430\u0446\u0438\u043e\u043d\u0430 \u2014 \u043f\u0440\u043e\u0441\u0442\u043e, \u0443\u0434\u043e\u0431\u043d\u043e \u0438 \u0431\u0435\u0437 \u043b\u0438\u0448\u043d\u0435\u0433\u043e.",
+            "descriptionLeft_uz": "Kundalik ratsion uchun sifatli vitamin va qo\u2018shimchalarni oson va qulay tanlang.",
+            "descriptionLeft_en": "Find high-quality vitamins and supplements for your daily routine \u2014 simple, convenient, and clear.",
+            "buttonText": "\u041f\u043e\u0434\u043e\u0431\u0440\u0430\u0442\u044c \u043a\u0443\u0440\u0441",
+            "buttonText_uz": "Mos kursni tanlash",
+            "buttonText_en": "Choose your plan",
+            "tags": [
+                {
+                    "label": "Premium Ingredients",
+                    "x": -45.0,
+                    "y": 70.0
+                },
+                {
+                    "label": "Non-GMO",
+                    "x": 45.0,
+                    "y": 70.0
+                },
+                {
+                    "label": "Allergen-Free",
+                    "x": 45.0,
+                    "y": 30.0
+                }
+            ],
+            "image": "http://127.0.0.1:8000/static/uploads/6db27dd4-507f-4c8c-a933-82f22c96ba81.png",
+            "color": "#FFFFFF"
+        },
+        {
+            "id": 2,
+            "headline": "\u0417\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u043a\u0430\u0436\u0434\u044b\u0439 \u0434\u0435\u043d\u044c",
+            "headline_uz": "Har kuni sog\u2018lik",
+            "headline_en": "Health Every Day",
+            "descriptionLeft": "\u041f\u043e\u0434\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0438\u0442\u0430\u043c\u0438\u043d\u044b \u0438 \u0434\u043e\u0431\u0430\u0432\u043a\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u0434\u0445\u043e\u0434\u044f\u0442 \u0438\u043c\u0435\u043d\u043d\u043e \u0432\u0430\u043c \u2014 \u0434\u043b\u044f \u044d\u043d\u0435\u0440\u0433\u0438\u0438, \u0438\u043c\u043c\u0443\u043d\u0438\u0442\u0435\u0442\u0430 \u0438 \u0431\u0430\u043b\u0430\u043d\u0441\u0430.",
+            "descriptionLeft_uz": "Energiya, immunitet va balans uchun sizga mos vitaminlarni tanlang.",
+            "descriptionLeft_en": "Choose vitamins and supplements tailored to you \u2014 for energy, immunity, and balance.",
+            "buttonText": "\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0432\u0438\u0442\u0430\u043c\u0438\u043d\u044b",
+            "buttonText_uz": "Vitaminlarni tanlash",
+            "buttonText_en": "Find your vitamins",
+            "tags": [
+                {
+                    "label": "25g Protein",
+                    "x": -45.0,
+                    "y": 60.0
+                },
+                {
+                    "label": "BCAA Included",
+                    "x": 45.0,
+                    "y": 60.0
+                },
+                {
+                    "label": "Fast Absorb",
+                    "x": 45.0,
+                    "y": 20.0
+                }
+            ],
+            "image": "/banners-img/hf_20260301_105955_41ebe898-144c-449d-b101-ad895c42dd99.png",
+            "color": "#FFFFFF"
+        },
+        {
+            "id": 3,
+            "headline": "\u0412\u0430\u0448 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0439 \u043a\u0443\u0440\u0441",
+            "headline_uz": "Sizning shaxsiy kursingiz",
+            "headline_en": "Your Personal Plan",
+            "descriptionLeft": "\u0418\u043d\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u043e\u0434\u0431\u043e\u0440 \u0432\u0438\u0442\u0430\u043c\u0438\u043d\u043e\u0432 \u0438 \u0434\u043e\u0431\u0430\u0432\u043e\u043a \u0434\u043b\u044f \u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u043e\u0439 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0438 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0438 \u0441\u0430\u043c\u043e\u0447\u0443\u0432\u0441\u0442\u0432\u0438\u044f.",
+            "descriptionLeft_uz": "Sog\u2018lig\u2018ingizni qo\u2018llab-quvvatlash uchun individual vitaminlar tanlovi.",
+            "descriptionLeft_en": "A personalized selection of vitamins and supplements to support your health every day.",
+            "buttonText": "\u041d\u0430\u0447\u0430\u0442\u044c \u043f\u043e\u0434\u0431\u043e\u0440",
+            "buttonText_uz": "Tanlashni boshlash",
+            "buttonText_en": "Start selection",
+            "tags": [
+                {
+                    "label": "No Caffeine",
+                    "x": -45.0,
+                    "y": 65.0
+                },
+                {
+                    "label": "100% Focus",
+                    "x": 45.0,
+                    "y": 65.0
+                },
+                {
+                    "label": "Vit B12+B6",
+                    "x": 45.0,
+                    "y": 25.0
+                }
+            ],
+            "image": "/banners-img/hf_20260301_105959_8d366f68-9d28-4d51-8981-e9a46b76ffc5 (1).jpeg",
+            "color": "#FFFFFF"
+        },
+        {
+            "id": 4,
+            "headline": "FOCUS. MENTAL CLARITY",
+            "headline_uz": "\u0442\u0435\u0441\u0442 2",
+            "headline_en": "",
+            "descriptionLeft": "Unlock your full cognitive potential with our advanced nootropic blend.",
+            "descriptionLeft_uz": "",
+            "descriptionLeft_en": "",
+            "buttonText": "\u041a\u0443\u043f\u0438\u0442\u044c \u0441\u0435\u0439\u0447\u0430\u0441",
+            "buttonText_uz": "Sotib olish",
+            "buttonText_en": "Shop Now",
+            "tags": [
+                {
+                    "label": "No Caffeine",
+                    "x": -45.0,
+                    "y": 65.0
+                },
+                {
+                    "label": "100% Focus",
+                    "x": 45.0,
+                    "y": 65.0
+                },
+                {
+                    "label": "Vit B12+B6",
+                    "x": 45.0,
+                    "y": 25.0
+                }
+            ],
+            "image": "/banners-img/hf_20260301_111404_2d0d3107-d7d5-4f55-bf85-12150f49ef9d.jpeg",
+            "color": "#FFFFFF"
+        }
+    ]
+}
