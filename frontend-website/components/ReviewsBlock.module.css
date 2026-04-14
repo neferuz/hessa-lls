@@ -1,0 +1,303 @@
+.section {
+    padding: 2rem 0 6rem;
+    background: transparent;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 1400px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+.stepTag {
+    font-family: var(--font-unbounded), sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #C497A0;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stepTag::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #C497A0;
+}
+
+.title {
+    font-family: var(--font-unbounded), sans-serif;
+    font-size: 2rem; /* Reduced from 2.5rem */
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+}
+
+.title::after {
+    content: '.';
+    color: #C497A0;
+}
+
+.desc {
+    font-family: var(--font-manrope), sans-serif;
+    font-size: 1rem; /* Reduced from 1.15rem */
+    font-weight: 500;
+    color: #64748b;
+    max-width: 500px;
+    line-height: 1.4;
+}
+
+/* MARQUEE ANIMATION */
+.marqueeWrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Soft fade on edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marqueeTrack {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    padding-left: 1.5rem;
+    animation: scroll 45s linear infinite;
+    /* Pause on hover so user can read */
+}
+
+.marqueeWrapper:hover .marqueeTrack {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* We duplicate the items 3 times, scrolling by 50% makes it seamless */
+}
+
+/* CARDS */
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(196, 151, 160, 0.08); /* Brand-tinted border */
+    border-radius: 24px; /* Slightly tighter rounding */
+    padding: 1.5rem; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 320px; /* More compact desktop width */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: grab;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(196, 151, 160, 0.1);
+    border-color: rgba(196, 151, 160, 0.2);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameRow {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.userName {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.verifiedIcon {
+    color: #3b82f6;
+    /* Trust blue */
+}
+
+.userTag {
+    font-family: var(--font-manrope), sans-serif;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.ratingBox {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #f59e0b; /* Gold */
+    background: #FFFAF0; /* Very light gold tint */
+    padding: 0.3rem 0.6rem;
+    border-radius: 100px;
+}
+
+.ratingValue {
+    font-family: var(--font-manrope), sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.reviewText {
+    font-family: var(--font-manrope), sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #334155;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 1.5rem 0 2rem; /* Reduced from 4rem */
+    }
+
+    .header {
+        margin-bottom: 2rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 230px;
+        padding: 1.25rem;
+        background: linear-gradient(135deg, #ffffff 0%, #FDF1F3 100%); /* Softer Hessa Pink Gradient */
+        border-radius: 24px;
+        border: none;
+        box-shadow: none;
+        gap: 0.75rem;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid rgba(196, 151, 160, 0.1);
+    }
+
+    .marqueeTrack {
+        gap: 0.75rem;
+    }
+
+    .userName {
+        font-size: 0.85rem;
+        font-family: var(--font-manrope), sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+    }
+
+    .reviewText {
+        font-size: 0.8rem;
+        line-height: 1.35;
+        color: #1a1a1a;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .userTag {
+        display: none;
+    }
+
+    .ratingBox {
+        padding: 0.2rem 0.4rem;
+        gap: 0.2rem;
+    }
+
+    .ratingValue {
+        font-size: 0.75rem;
+    }
+
+    .cardHeader {
+        align-items: center;
+    }
+
+    .verifiedIcon {
+        width: 12px;
+        height: 12px;
+    }
+}

@@ -1,0 +1,233 @@
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+.molecularPattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45v-30L30 0z' fill-rule='evenodd' stroke='%23C497A0' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 80px 70px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.grain {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200%;
+    /* animation: noise 0.2s infinite; Removed for performance optimization */
+    visibility: visible;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes noise {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-5%, -5%)
+    }
+
+    20% {
+        transform: translate(-10%, 5%)
+    }
+
+    30% {
+        transform: translate(5%, -10%)
+    }
+
+    40% {
+        transform: translate(-5%, 15%)
+    }
+
+    50% {
+        transform: translate(-10%, 5%)
+    }
+
+    60% {
+        transform: translate(15%, 0)
+    }
+
+    70% {
+        transform: translate(0, 10%)
+    }
+
+    80% {
+        transform: translate(-15%, 0)
+    }
+
+    90% {
+        transform: translate(10%, 5%)
+    }
+
+    100% {
+        transform: translate(5%, 0)
+    }
+}
+
+.main>* {
+    position: relative;
+    z-index: 1;
+}
+
+.contentWrapper {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    border-radius: 80px 80px 0 0;
+    /* Large premium rounding from photo */
+    margin-top: -80px;
+    /* Overlap effect */
+    width: 100%;
+    padding-top: 40px;
+    box-shadow: 0 -20px 50px rgba(196, 151, 160, 0.08); /* Gentle shadow using new color */
+    /* Subtle top shadow for depth */
+    overflow: hidden;
+}
+
+.bgBlob {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(196, 151, 160, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+    will-change: transform;
+    /* animation: float 25s infinite alternate ease-in-out; Removed for performance optimization */
+}
+
+.blob1 {
+    top: -200px;
+    left: -300px;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(196, 151, 160, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.blob2 {
+    top: 30%;
+    right: -300px;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(255, 72, 81, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    animation-delay: -7s;
+    animation-duration: 30s;
+}
+
+.blob3 {
+    bottom: 0%;
+    left: -300px;
+    width: 1100px;
+    height: 1100px;
+    background: radial-gradient(circle, rgba(255, 200, 100, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    animation-delay: -15s;
+    animation-duration: 35s;
+}
+
+.blob4 {
+    top: 15%;
+    left: 40%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(196, 151, 160, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+    animation-duration: 45s;
+    animation-delay: -3s;
+}
+
+.blob5 {
+    bottom: 25%;
+    right: 15%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(255, 72, 81, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+    animation-duration: 50s;
+    animation-delay: -12s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) rotate(10deg) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 40px) rotate(-15deg) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+.capsule {
+    position: absolute;
+    width: 25px;
+    height: 60px;
+    border-radius: 50px;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.capsuleBlue {
+    background: linear-gradient(to bottom, #C497A0 50%, #ffffff 50%);
+}
+
+.capsuleRed {
+    background: linear-gradient(to bottom, #ff4851 50%, #ffffff 50%);
+}
+
+.capsuleYellow {
+    background: linear-gradient(to bottom, #ffc864 50%, #ffffff 50%);
+}
+
+.floatingLeaf {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+    color: #C497A0;
+}
+
+@keyframes pulse-soft {
+    0%, 100% { transform: scale(1); opacity: 0.1; }
+    50% { transform: scale(1.1); opacity: 0.15; }
+}
+
+.botanicalPulse {
+    animation: pulse-soft 8s infinite ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 0;
+    }
+    .contentWrapper {
+        margin-top: 0px; /* Completely removed overlap to fix the button being cut off */
+        border-radius: 32px 32px 0 0;
+        padding-top: 40px;
+    }
+}

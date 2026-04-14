@@ -1,0 +1,232 @@
+.legalWrapper {
+    min-height: 100vh;
+    padding: 160px 2rem 100px;
+    background: linear-gradient(135deg, #ffffff 0%, #fffcfe 50%, #fff9fc 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.legalWrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 40px;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.03), transparent);
+    z-index: 0;
+}
+
+.legalWrapper::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb:hover {
+    color: #C497A0;
+}
+
+.title {
+    font-family: var(--font-unbounded), sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin-bottom: 4rem;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 4rem;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.03);
+}
+
+.lastUpdated {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(196, 151, 160, 0.1);
+    color: #C497A0;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.section {
+    margin-bottom: 3.5rem;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.sectionTitle {
+    font-family: var(--font-unbounded), sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.sectionNumber {
+    color: #C497A0;
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+}
+
+.text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.listItem {
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.listItem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    background: #C497A0;
+    border-radius: 50%;
+}
+
+.highlight {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .legalWrapper {
+        padding: 140px 4% 100px;
+    }
+    
+    .content {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .legalWrapper {
+        padding: 120px 1.25rem 80px;
+    }
+
+    .breadcrumb {
+        margin-bottom: 1.5rem;
+        font-size: 0.75rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        letter-spacing: -0.02em;
+    }
+
+    .lastUpdated {
+        margin-bottom: 2rem;
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .content {
+        padding: 2rem 1.25rem;
+        border-radius: 28px;
+    }
+
+    .section {
+        margin-bottom: 2.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.1rem;
+        gap: 0.75rem;
+        line-height: 1.3;
+    }
+
+    .sectionNumber {
+        font-size: 0.8rem;
+    }
+
+    .text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .listItem {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .content {
+        padding: 1.75rem 1rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+}
