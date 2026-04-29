@@ -1,0 +1,567 @@
+.heroWrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff; /* Changed from transparent to white */
+    overflow: hidden;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    width: 100%;
+    max-width: 100vw;
+    height: calc(100vh - 48px); /* Height of viewport minus ticker height */
+    margin: 0;
+    padding: 0;
+    align-items: stretch;
+    gap: 0;
+    overflow: hidden;
+}
+
+.leftCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8rem 4rem 4rem 6rem;
+    background: transparent;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    max-width: 50vw; /* Strict boundary */
+    overflow: hidden;
+}
+
+.subtitle {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 0.75rem; /* Smaller */
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #C497A0;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem; /* Tighter margin */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.subtitle::before {
+    content: '';
+    display: block;
+    width: 1.5rem; /* Shorter line */
+    height: 2px;
+    background: #C497A0;
+}
+
+.bigHeading {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); /* More compact font size */
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1; /* Tighter line height */
+    margin-bottom: 1rem; /* Tighter margin */
+    letter-spacing: -0.02em;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.descText {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1.05rem; /* Smaller */
+    line-height: 1.5;
+    color: #475569;
+    max-width: 480px;
+    margin-bottom: 2rem; /* Tighter margin */
+    font-weight: 400;
+}
+
+.primaryBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.6rem 0.6rem 0.6rem 2rem;
+    background: #C497A0;
+    color: #ffffff;
+    border-radius: 100px;
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.primaryBtn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent) border-box;
+    background-size: 200% 100%;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: borderShimmer 3s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes borderShimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px);
+    background: #AD8089;
+}
+
+.arrowCircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #C497A0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.primaryBtn:hover .arrowCircle {
+    transform: scale(1.1);
+}
+
+.rightCol {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 50vw; /* Strict boundary */
+    overflow: hidden;
+}
+
+.productContainer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.productImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.navOverlay {
+    position: absolute;
+    bottom: 65px; /* Final micro-adjustment upwards sitting just 15px below the ticker's 80px bottom mark */
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 50;
+}
+
+.navProgress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.progressLabel {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.progressBar {
+    height: 3px;
+    background: #e2e8f0;
+    width: 60px;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progressFill {
+    position: absolute;
+    inset: 0;
+    background: #C497A0;
+    transform-origin: left;
+}
+
+.navArrows {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.navBtn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #475569;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navBtn:hover {
+    background: #C497A0;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* TICKER */
+.heroTicker {
+    position: absolute;
+    bottom: 0; /* Align to the very bottom */
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tickerTrack {
+    display: flex;
+    white-space: nowrap;
+    width: fit-content;
+    animation: tickerMove 30s linear infinite;
+    will-change: transform;
+}
+
+@keyframes tickerMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.tickerGroup {
+    display: flex;
+    align-items: center;
+}
+
+.tickerItem {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1a1a1a;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tickerItem::after {
+    content: "•";
+    position: absolute;
+    right: 0;
+    color: #ccc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .heroWrapper {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+    .contentGrid {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+    .leftCol {
+        order: 2;
+        padding: 2rem 1.5rem 3rem; /* Even more compact padding */
+        text-align: left;
+        align-items: flex-start;
+        max-width: 100vw;
+    }
+    .textContentInner {
+        gap: 0.6rem !important; /* Even tighter gap */
+        align-items: flex-start !important;
+    }
+    .subtitle {
+        font-size: 0.65rem !important;
+        margin-bottom: 0.5rem !important;
+        letter-spacing: 0.1em !important;
+    }
+    .subtitle::before {
+        display: none;
+    }
+    .bigHeading {
+        font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.1 !important;
+        text-align: left !important;
+    }
+    .descText {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        max-width: 480px;
+        margin-bottom: 1.2rem !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        text-align: left !important;
+    }
+    .mobileBtnCol {
+        justify-content: flex-start !important;
+        padding: 0 1.5rem !important;
+        margin-top: 0 !important;
+    }
+    .rightCol {
+        order: 1;
+        height: 45vh; /* More compact photo for tablet */
+        min-height: 350px;
+        max-width: 100vw;
+    }
+    .navOverlay {
+        bottom: 1rem;
+        right: 1.5rem; /* Move nav back to right side if text is left-aligned? Or keep center? User said left for everything. */
+        left: auto;
+        transform: none;
+    }
+}
+
+.textContentInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.desktopBtn {
+    display: block;
+}
+
+.mobileBtnCol {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .heroWrapper {
+        min-height: auto;
+        background: transparent;
+        padding-top: 40px; /* Reduced space for fixed navbar */
+        padding-bottom: 60px; /* Tighter space for ticker */
+    }
+    .contentGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    
+    /* 1. PHOTO (Top) */
+    .rightCol {
+        order: 1; 
+        width: 100%;
+        height: 48vh; /* Slightly taller for image prominence */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        margin: 0;
+    }
+    .productImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Fill the gaps */
+        padding: 0 !important; /* Remove gaps */
+        filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.08));
+    }
+    
+    /* ULTRA-COMPACT NAV PILL (Overlaps Photo/Text boundary) */
+    .navOverlay {
+        position: absolute;
+        bottom: 0.8rem; /* Tighter to bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        background: rgba(26, 26, 26, 0.8); /* Slightly more transparent */
+        backdrop-filter: blur(12px);
+        padding: 0.3rem 0.6rem; /* More compact padding */
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem; /* Tighter gap */
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .navProgress {
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        font-size: 0.65rem; /* Smaller font */
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        flex: none; 
+    }
+    .progressLabel {
+        color: #fff;
+    }
+    .progressBar {
+        width: 15px; /* Shorter bar */
+        height: 2px;
+        background: rgba(255, 255, 255, 0.2);
+        max-width: 15px;
+    }
+    .progressFill {
+        background: #fff;
+    }
+    .navArrows {
+        gap: 0.3rem; /* Tighter gap */
+        display: flex;
+    }
+    .navBtn {
+        width: 24px; /* Smaller buttons */
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border: none;
+        box-shadow: none;
+    }
+    .navBtn svg {
+        width: 14px; /* Smaller icons */
+        height: 14px;
+    }
+    .navBtn:active {
+        background: #C497A0;
+    }
+    
+    /* 2. TEXT (Middle) */
+    .leftCol {
+        order: 2;
+        width: 100%;
+        padding: 1.8rem 1.2rem 0.5rem; /* Much more compact padding */
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        text-align: center;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0; 
+    }
+    
+    .textContentInner {
+        gap: 0.4rem; /* Ultra tight gap */
+        align-items: center;
+    }
+    .subtitle {
+        font-size: 0.65rem;
+        margin-bottom: 0.4rem;
+        letter-spacing: 0.12em;
+    }
+    .subtitle::before {
+        display: none;
+    }
+    .bigHeading {
+        font-family: var(--font-evolventa), sans-serif;
+        font-size: clamp(1.5rem, 6.5vw, 1.9rem); /* Slightly smaller heading */
+        font-weight: 700;
+        margin-bottom: 0.4rem; /* Less space below heading */
+        line-height: 1.1;
+        color: #1a1a1a;
+        letter-spacing: -0.02em;
+    }
+    .descText {
+        font-size: 0.85rem; /* Slightly smaller text */
+        line-height: 1.5;
+        margin-bottom: 0;
+        color: #576574;
+        max-width: 95%;
+    }
+    .desktopBtn {
+        display: none;
+    }
+
+    /* 3. CTA BUTTON (Bottom) */
+    .mobileBtnCol {
+        display: flex;
+        justify-content: center;
+        order: 3;
+        width: 100%;
+        padding: 0 1.2rem;
+        margin-top: 0.8rem; /* Reduced margin */
+        margin-bottom: 1.2rem; /* Reduced margin */
+        z-index: 20;
+    }
+    .mobileBtnCol a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .primaryBtn {
+        width: 100%; /* Back to full width for mobile impact but compact height */
+        max-width: 320px;
+        padding: 0.4rem 0.4rem 0.4rem 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 100px;
+        justify-content: center;
+    }
+    
+    /* 4. TICKER */
+    .heroTicker {
+        display: flex;
+        bottom: 0px;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        z-index: 110;
+    }
+    .tickerItem {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        padding: 0 1.5rem;
+    }
+    .tickerItem::after {
+        content: "•";
+        position: absolute;
+        right: 0;
+        color: #ccc;
+    }
+}

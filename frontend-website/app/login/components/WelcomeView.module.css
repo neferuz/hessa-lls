@@ -1,0 +1,247 @@
+.welcomeWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.bgAccent1 {
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(196, 151, 160, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+}
+
+.bgAccent2 {
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(73, 122, 155, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.content {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.logoBadge {
+    font-family: var(--font-unbounded);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    background: #f8fafc;
+    padding: 0.5rem 1.4rem;
+    border-radius: 100px;
+    border: 1px solid #f1f5f9;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+}
+
+.title {
+    font-family: var(--font-evolventa);
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+}
+
+.titleHighlight {
+    color: #C497A0;
+}
+
+.subtitle {
+    font-family: var(--font-evolventa);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #475569;
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    font-weight: 500;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.benefitItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C497A0;
+}
+
+.benefitLabel {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.benefitDesc {
+    font-size: 0.65rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.startBtn {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 1.4rem 4rem;
+    border-radius: 100px;
+    font-family: var(--font-evolventa);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btnIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.footerLine {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.line {
+    width: 40px;
+    height: 1px;
+    background: #f1f5f9;
+}
+
+.footerText {
+    font-family: var(--font-evolventa);
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: #cbd5e1;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .welcomeWrapper {
+        padding: 1rem;
+        justify-content: center;
+    }
+    .logoBadge {
+        margin-bottom: 0.6rem !important;
+        padding: 0.3rem 0.8rem !important;
+        font-size: 0.65rem !important;
+    }
+    .title {
+        font-size: 1.4rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+    .subtitle {
+        font-size: 0.85rem !important;
+        margin-bottom: 1.5rem !important;
+        max-width: 300px;
+    }
+    .benefits {
+        gap: 0.5rem !important;
+        margin-bottom: 2rem !important;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    .benefitItem {
+        width: 30% !important;
+        gap: 0.3rem !important;
+    }
+    .iconWrapper {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 12px !important;
+    }
+    .iconWrapper svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+    .benefitLabel {
+        font-size: 0.55rem !important;
+        letter-spacing: 0.02em !important;
+    }
+    .benefitDesc {
+        font-size: 0.5rem !important;
+        display: none; /* Hide description to save space on mobile */
+    }
+    .startBtn {
+        padding: 0.9rem 1.5rem !important;
+        font-size: 0.75rem !important;
+        gap: 0.75rem !important;
+    }
+    .btnIcon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    .btnIcon svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    .footer {
+        bottom: 1rem !important;
+    }
+}

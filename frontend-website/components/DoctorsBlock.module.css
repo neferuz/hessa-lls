@@ -1,0 +1,371 @@
+.section {
+    padding: 6rem 0;
+    background: transparent;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* LEFT COLUMN TEXT */
+.textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 2rem;
+}
+
+.stepTag {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #C497A0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stepTag::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #C497A0;
+}
+
+.title {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.04em;
+}
+
+.title::after {
+    content: '.';
+    color: #C497A0;
+}
+
+.desc {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.extra {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+}
+
+.ctaBtn {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.6rem 0.6rem 0.6rem 1.75rem;
+    border-radius: 100px;
+    background: #f8fafc;
+    color: #1a1a1a;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.ctaBtn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1.2px solid transparent;
+    border-radius: 100px;
+    background: linear-gradient(90deg, transparent, rgba(196, 151, 160, 0.45), transparent) border-box;
+    background-size: 200% 100%;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: doctorBorderShimmer 4s linear infinite;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@keyframes doctorBorderShimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.ctaBtnText {
+    font-family: var(--font-evolventa), sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 2;
+}
+
+.arrowCircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #C497A0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ctaBtn:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.ctaBtn:hover .arrowCircle {
+    transform: translateX(4px);
+    background: #AD8089;
+}
+
+/* RIGHT COLUMN DOCTORS */
+.doctorsVisual {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.cardStagger {
+    margin-top: 5rem;
+}
+
+.imageCard {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.85;
+    border-radius: 40px;
+    overflow: hidden;
+    background: #f8fafc;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(196, 151, 160, 0.05);
+}
+
+.imageCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(196, 151, 160, 0.12);
+    border-color: rgba(196, 151, 160, 0.2);
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageCard:hover .image {
+    transform: scale(1.05);
+}
+
+.badgeOverlay {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 2;
+}
+
+.expTag {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    padding: 1.25rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.01em;
+}
+
+.role {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #C497A0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .textContent {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .ctaBtn {
+        width: auto;
+        height: auto;
+        padding: 0.6rem 0.6rem 0.6rem 1.5rem;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0;
+    }
+
+    .ctaBtnText {
+        display: inline;
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .arrowCircle {
+        width: 36px;
+        height: 36px;
+        background: #C497A0;
+    }
+
+    .arrowCircle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* COMPACT SQUARE GRID FOR MOBILE */
+    .doctorsVisual {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        gap: 0; /* Tightest fit */
+    }
+
+    .cardStagger {
+        margin-top: 0;
+    }
+
+    .imageCard {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 0.8;
+        border-radius: 0; /* Fully square */
+        box-shadow: none;
+        background: #f8fafc;
+        border: none;
+    }
+
+    .imageWrapper {
+        border-radius: 0;
+    }
+
+    .image {
+        border-radius: 0;
+    }
+
+    .info {
+        padding: 0.5rem 0;
+        text-align: left;
+        gap: 0.1rem;
+    }
+
+    .name {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .role {
+        font-size: 0.7rem;
+        letter-spacing: 0;
+    }
+
+    .badgeOverlay {
+        top: 0.4rem;
+        right: 0.4rem;
+    }
+
+    .expTag {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.6rem;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.9);
+    }
+}

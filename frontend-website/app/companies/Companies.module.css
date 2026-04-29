@@ -1,0 +1,912 @@
+.pageWrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    overflow-x: hidden;
+}
+
+.pageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(196, 151, 160, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(196, 151, 160, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(196, 151, 160, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero {
+    padding: 160px 4rem 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.heroContent {
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: linear-gradient(135deg, #ffffff 0%, #fff9fa 50%, #fef2f4 100%);
+    border-radius: 100px;
+    font-family: var(--font-evolventa);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: var(--font-evolventa);
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.productTitle {
+    transition: all 0.3s ease;
+}
+
+.description {
+    font-family: var(--font-evolventa);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+.heroImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #fffafa 50%, #fff2f4 100%);
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.heroImage {
+    object-fit: cover;
+}
+
+/* --- VALUES MARQUEE --- */
+
+
+/* --- BENEFITS SECTION --- */
+.benefitsSection {
+    padding: 40px 4rem; /* More compact */
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.sectionHeader {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 2.5rem; /* Increased slightly for balance */
+}
+
+.benefitsTitleMain {
+    font-family: var(--font-evolventa);
+    font-size: 2.2rem; /* More compact title */
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.mobileHideBr {
+    display: inline;
+}
+
+.mobileOnly {
+    display: none;
+}
+
+.desktopOnly {
+    display: block;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; /* Tighter gap */
+}
+
+.benefitCard {
+    padding: 1.5rem; /* More compact padding */
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 32px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: none;
+}
+
+.benefitCard:hover {
+    transform: translateY(-8px);
+    background: #fff;
+    box-shadow: none;
+    border-color: rgba(255, 72, 81, 0.1);
+}
+
+.benefitIcon {
+    width: 48px; /* Smaller icon */
+    height: 48px;
+    background: #fff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    box-shadow: none;
+    color: #FF4851;
+}
+
+.benefitTitle {
+    font-family: var(--font-evolventa);
+    font-size: 1.25rem; /* More compact title */
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.benefitText {
+    font-family: var(--font-evolventa);
+    font-size: 0.9rem; /* Smaller text */
+    line-height: 1.5;
+    color: #666;
+}
+
+/* --- CASE STUDY --- */
+.caseSection {
+    background: linear-gradient(135deg, #ffffff 0%, #fffafa 50%, #fff2f4 100%);
+    color: #1a1a1a;
+    border: 1px solid rgba(196, 151, 160, 0.1);
+    box-shadow: none; /* Shadow removed */
+    padding: 60px 0; /* More compact padding */
+    max-width: calc(100% - 4rem); /* Wider on screen but tighter content */
+    margin: 40px auto;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.caseSection::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 72, 81, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(50px);
+}
+
+.caseContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3rem; /* Tighter gap */
+    align-items: center;
+}
+
+.caseImage {
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.caseImageWrapper {
+    position: relative;
+    border-radius: 32px;
+}
+
+.caseSteps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Tighter gap between steps */
+}
+
+.caseStep {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.stepNumber {
+    font-family: var(--font-evolventa);
+    font-size: 0.85rem;
+    color: #C497A0;
+    opacity: 1;
+    margin-top: 0.2rem;
+    font-weight: 800;
+}
+
+.stepText {
+    font-family: var(--font-evolventa);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #1a1a1a;
+    font-weight: 400;
+}
+
+/* --- STATS SECTION --- */
+.statsSection {
+    max-width: 1200px;
+    padding: 2.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.statsSectionWrapper {
+    margin-top: 6rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.statItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.statValue {
+    font-family: var(--font-space-grotesk);
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin: 0;
+    letter-spacing: -0.04em;
+}
+
+.statLabel {
+    font-family: var(--font-evolventa);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    max-width: none;
+}
+
+/* --- PRODUCT SHOWCASE --- */
+.productSection {
+    padding: 40px 4rem 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.swiperWrapper {
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.productSwiper {
+    padding: 20px 0 0 !important;
+}
+
+.productSwiper :global(.swiper-pagination) {
+    bottom: 0 !important;
+}
+
+.productSwiper :global(.swiper-pagination-bullet) {
+    background: #b38ffa !important;
+    width: 8px;
+    height: 8px;
+    opacity: 0.3;
+}
+
+.productSwiper :global(.swiper-pagination-bullet-active) {
+    background: #b38ffa !important;
+    opacity: 1;
+    width: 24px;
+    border-radius: 4px;
+}
+
+.audienceGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #fff9fa 50%, #fef2f4 100%);
+    border-radius: 24px;
+    padding: 0.6rem;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.productCard:hover {
+    transform: translateY(-8px);
+    box-shadow: none;
+}
+
+.productImageWrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    display: block;
+}
+
+.productImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(1);
+}
+
+.productCard:hover .productImg {
+    transform: scale(1.05);
+}
+
+.productContent {
+    position: relative;
+    padding: 0.4rem 0.5rem 0.8rem;
+    background: transparent;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.productName {
+    font-family: var(--font-evolventa);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.productCard:hover .productName {
+    color: #1a1a1a;
+}
+
+.productGoal {
+    font-family: var(--font-evolventa);
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.productCard .stepNumber {
+    color: #1a1a1a;
+    opacity: 0.5;
+    font-size: 0.85rem;
+}
+
+.productCard .benefitText {
+    color: #666;
+    margin-top: 0.2rem;
+}
+
+/* --- FORM SECTION --- */
+.contactSection {
+    padding: 20px 4rem 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr;
+    align-items: flex-start;
+    gap: 6rem;
+}
+
+.contactInfo h2 {
+    font-family: var(--font-evolventa);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.managerCard {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2.5rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.managerCard:hover {
+    box-shadow: none;
+    transform: translateY(-3px);
+}
+
+.managerPhoto {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: none;
+}
+
+.managerName {
+    font-family: var(--font-evolventa);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #1a1a1a;
+}
+
+.managerRole {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-family: var(--font-evolventa);
+}
+
+.formContainer,
+.formWrapper {
+    width: 100%;
+}
+
+.formWrapper {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+}
+
+.fullWidth {
+    grid-column: span 2;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+}
+
+.inputGroup label {
+    font-family: var(--font-evolventa);
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    font-family: var(--font-evolventa);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #fafafa;
+    color: #1a1a1a;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+    border-color: #C497A0;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1.1rem;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 100px; /* Branded pill shape */
+    font-family: var(--font-evolventa);
+    font-size: 0.8rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.submitBtn:hover {
+    background: #C497A0;
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        padding: 60px 4rem;
+        gap: 3rem;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .statsSectionWrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 2rem 60px;
+    }
+
+    .heroContent {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .heroImageWrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .caseContainer {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .caseSteps {
+        text-align: left;
+    }
+
+    .productSection {
+        padding: 20px 0;
+    }
+
+    .sectionHeader {
+        padding: 0 1.25rem;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 1.5rem;
+    }
+
+    .noWrap {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 768px) {
+    .pageWrapper {
+        padding-top: 80px; /* Reduced top padding */
+    }
+
+    .hero {
+        padding: 20px 1.25rem 15px; /* Even more compact */
+        gap: 1rem;
+    }
+
+    .badge {
+        padding: 0.4rem 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    .title {
+        font-size: 1.8rem !important; /* Smaller title */
+        margin-bottom: 0.8rem;
+    }
+
+    .description {
+        font-size: 0.85rem; /* Smaller text */
+        margin-bottom: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .benefitsSection {
+        padding: 25px 1.25rem; /* Reduced padding */
+        margin-bottom: 10px;
+    }
+
+    .benefitsTitleMain {
+        font-size: 1.4rem; /* Smaller section title */
+        margin-bottom: 1.5rem;
+    }
+
+    .benefitsGrid {
+        gap: 0.8rem; /* Tighter gap */
+    }
+
+    .benefitCard {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .benefitIcon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 0.5rem;
+    }
+
+    .benefitTitle,
+    .productName {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.3rem;
+    }
+
+    .benefitText {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+
+    .statsSection {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.4rem;
+        padding: 0.75rem 0.5rem;
+        margin: 1.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .statValue {
+        font-size: 0.95rem;
+    }
+
+    .statLabel {
+        font-size: 0.55rem;
+    }
+
+    .statsSectionWrapper {
+        margin-top: 2rem;
+    }
+
+    .productSection {
+        padding: 20px 0 !important;
+    }
+
+    .swiperWrapper {
+        width: 100%;
+        margin-top: 1rem;
+        position: relative;
+    }
+
+    .productSwiper {
+        padding: 0 !important;
+    }
+
+    .sectionHeader {
+        padding: 0 1.25rem; /* Apply horizontal padding here instead */
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .productGrid,
+    .audienceGrid {
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+    }
+
+    .productCard {
+        padding: 0.25rem; /* Even more compact */
+        border-radius: 14px;
+        height: 100%; /* Uniform height */
+    }
+
+    .productSwiper {
+        padding-bottom: 2rem !important;
+    }
+
+    :global(.swiper-pagination-bullet) {
+        width: 4px !important;
+        height: 4px !important;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+        width: 12px !important;
+    }
+
+    .productImageWrapper {
+        aspect-ratio: 1.5; /* More shallow image for process/audience */
+    }
+
+    .productContent {
+        padding: 0.4rem;
+    }
+
+    .caseSection {
+        padding: 25px 0;
+        margin: 10px auto;
+        border-radius: 20px;
+        max-width: calc(100% - 1.5rem);
+    }
+
+    .caseContainer {
+        padding: 0 1rem;
+        gap: 1.2rem;
+    }
+
+    .caseImage {
+        height: 160px; /* Much shallower */
+    }
+
+    .caseSteps {
+        gap: 0.6rem;
+    }
+
+    .caseStep {
+        gap: 0.6rem;
+    }
+
+    .contactSection {
+        padding: 20px 1.25rem 60px;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .contactInfo h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .managerCard {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        gap: 1.2rem;
+        border-radius: 24px;
+    }
+
+    .managerPhoto {
+        width: 60px;
+        height: 60px;
+    }
+
+    .managerName {
+        font-size: 1rem;
+    }
+
+    .managerRole {
+        font-size: 0.75rem;
+    }
+
+    .formWrapper {
+        padding: 1.5rem;
+        border-radius: 24px;
+    }
+
+    .formGrid {
+        gap: 1rem;
+    }
+
+    .inputGroup label {
+        font-size: 0.55rem;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea {
+        padding: 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .submitBtn {
+        padding: 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    .mobileOnly {
+        display: block !important;
+    }
+
+    .desktopOnly {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.6rem !important; /* Even smaller for tiny screens */
+        letter-spacing: -0.02em;
+    }
+
+    .productTitle {
+        font-size: 1.3rem !important;
+    }
+
+    .submitBtn {
+        padding: 0.8rem;
+        font-size: 0.7rem;
+    }
+}

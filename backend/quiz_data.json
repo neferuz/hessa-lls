@@ -1,0 +1,266 @@
+{
+    "questions": [
+        {
+            "id": "gender",
+            "section": "Личные данные",
+            "section_uz": "Shaxsiy ma'lumotlar",
+            "section_en": "Personal Data",
+            "label": "Ваш пол:",
+            "label_uz": "Jinsingiz:",
+            "label_en": "Your gender:",
+            "type": "options",
+            "options": [
+                { "id": "female", "text": "Женщина", "text_uz": "Ayol", "text_en": "Woman" },
+                { "id": "male", "text": "Мужчина", "text_uz": "Erkak", "text_en": "Man" }
+            ],
+            "gender": "both",
+            "multiple": false,
+            "order": 0
+        },
+        {
+            "id": "female_priorities",
+            "section": "Приоритеты",
+            "section_uz": "Ustuvorliklar",
+            "section_en": "Priorities",
+            "label": "Отметьте до 3-х направлений, которые для вас наиболее важны сейчас:",
+            "label_uz": "Hozirda siz uchun eng muhim bo'lgan 3 ta yo'nalishni belgilang:",
+            "label_en": "Select up to 3 areas that are most important to you now:",
+            "type": "options",
+            "multiple": true,
+            "gender": "female",
+            "options": [
+                { "id": "energy", "text": "Энергия и бодрость на весь день", "text_uz": "Kun davomida energiya va tetiklik", "text_en": "Energy and vigor all day" },
+                { "id": "stress", "text": "Спокойствие и устойчивость к стрессу", "text_uz": "Xotirjamlik va stressga chidamlilik", "text_en": "Calmness and stress resistance" },
+                { "id": "sleep", "text": "Глубокий восстанавливающий сон", "text_uz": "Chuqur tiklovchi uyqu", "text_en": "Deep restorative sleep" },
+                { "id": "immunity", "text": "Укрепление защитных сил организма", "text_uz": "Organizmning himoya kuchlarini mustahkamlash", "text_en": "Strengthening body defenses" },
+                { "id": "beauty", "text": "Красота кожи, сияние волос, крепкие ногти", "text_uz": "Teri go'zalligi, sochlar yaltirashi, mustahkam tirnoqlar", "text_en": "Skin beauty, hair shine, strong nails" },
+                { "id": "weight", "text": "Гармония веса и обмена веществ", "text_uz": "Vazn va moddalar almashinuvi uyg'unligi", "text_en": "Weight and metabolism harmony" },
+                { "id": "hormones", "text": "Баланс женского здоровья", "text_uz": "Ayollar salomatligi balansi", "text_en": "Women's health balance" },
+                { "id": "focus", "text": "Ясный ум и фокус внимания", "text_uz": "Tiniq aql va diqqat markazi", "text_en": "Clear mind and focus" }
+            ],
+            "order": 1
+        },
+        {
+            "id": "male_priorities",
+            "section": "Приоритеты",
+            "section_uz": "Ustuvorliklar",
+            "section_en": "Priorities",
+            "label": "Выберите до 3-х приоритетных направлений:",
+            "label_uz": "3 ta ustuvor yo'nalishni tanlang:",
+            "label_en": "Select up to 3 priority areas:",
+            "type": "options",
+            "multiple": true,
+            "gender": "male",
+            "options": [
+                { "id": "strength", "text": "Энергия и выносливость", "text_uz": "Energiya va chidamlilik", "text_en": "Energy and endurance" },
+                { "id": "focus", "text": "Умственная работоспособность", "text_uz": "Aqliy ish qobiliyati", "text_en": "Mental performance" },
+                { "id": "muscle", "text": "Набор мышечной массы и силы", "text_uz": "Mushak massasi va kuchini oshirish", "text_en": "Muscle mass and strength gain" },
+                { "id": "immunity", "text": "Крепкий иммунитет", "text_uz": "Kuchli immunitet", "text_en": "Strong immunity" },
+                { "id": "sleep", "text": "Качественный сон и восстановление", "text_uz": "Sifatli uyqu va tiklanish", "text_en": "Quality sleep and recovery" },
+                { "id": "weight", "text": "Метаболизм и контроль веса", "text_uz": "Metabolizm va vazn nazorati", "text_en": "Metabolism and weight control" },
+                { "id": "stress", "text": "Управление стрессом", "text_uz": "Stressni boshqarish", "text_en": "Stress management" },
+                { "id": "joints", "text": "Здоровье суставов и связок", "text_uz": "Bo'g'im va paylar salomatligi", "text_en": "Joints and ligaments health" },
+                { "id": "heart", "text": "Сердечно-сосудистая система", "text_uz": "Yurak-qon tomir tizimi", "text_en": "Cardiovascular system" },
+                { "id": "power", "text": "Мужская сила и потенция", "text_uz": "Erkaklik kuchi va potensiya", "text_en": "Male power and potency" }
+            ],
+            "order": 2
+        },
+        {
+            "id": "age",
+            "section": "О вас",
+            "section_uz": "Siz haqingizda",
+            "section_en": "About you",
+            "label": "Сколько вам лет?",
+            "label_uz": "Yoshingiz nechada?",
+            "label_en": "How old are you?",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "18-25", "text": "18-25", "text_uz": "18-25", "text_en": "18-25" },
+                { "id": "26-35", "text": "26-35", "text_uz": "26-35", "text_en": "26-35" },
+                { "id": "36-45", "text": "36-45", "text_uz": "36-45", "text_en": "36-45" },
+                { "id": "46-55", "text": "46-55", "text_uz": "46-55", "text_en": "46-55" },
+                { "id": "56+", "text": "56+", "text_uz": "56+", "text_en": "56+" }
+            ],
+            "order": 3
+        },
+        {
+            "id": "height",
+            "section": "О вас",
+            "section_uz": "Siz haqingizda",
+            "section_en": "About you",
+            "label": "Ваш рост (см):",
+            "label_uz": "Bo'yingiz (sm):",
+            "label_en": "Your height (cm):",
+            "type": "input",
+            "placeholder": "170",
+            "gender": "both",
+            "order": 4
+        },
+        {
+            "id": "weight",
+            "section": "О вас",
+            "section_uz": "Siz haqingizda",
+            "section_en": "About you",
+            "label": "Ваш вес (кг):",
+            "label_uz": "Vazningiz (kg):",
+            "label_en": "Your weight (kg):",
+            "type": "input",
+            "placeholder": "65",
+            "gender": "both",
+            "order": 5
+        },
+        {
+            "id": "allergies",
+            "section": "Питание",
+            "section_uz": "Питание",
+            "section_en": "Nutrition",
+            "label": "Какие продукты вызывают у вас аллергическую реакцию?",
+            "label_uz": "Qaysi mahsulotlar sizda allergiya chaqiradi?",
+            "label_en": "Which products cause an allergic reaction?",
+            "type": "options",
+            "multiple": true,
+            "gender": "both",
+            "options": [
+                { "id": "none", "text": "Аллергий нет", "text_uz": "Allergiya yo'q", "text_en": "No allergies" },
+                { "id": "milk", "text": "Молоко и производные", "text_uz": "Sut mahsulotlari", "text_en": "Milk and derivatives" },
+                { "id": "gluten", "text": "Продукты с глютеном", "text_uz": "Glyutenli mahsulotlar", "text_en": "Gluten products" },
+                { "id": "seafood", "text": "Дары моря", "text_uz": "Dengiz mahsulotlari", "text_en": "Seafood" },
+                { "id": "nuts", "text": "Орехи и семена", "text_uz": "Yong'oqlar", "text_en": "Nuts and seeds" }
+            ],
+            "order": 6
+        },
+        {
+            "id": "sweets_freq",
+            "section": "Питание",
+            "section_uz": "Питание",
+            "section_en": "Nutrition",
+            "label": "Как часто вы употребляете сладкое?",
+            "label_uz": "Qanchalik tez-tez shirinlik iste'mol qilasiz?",
+            "label_en": "How often do you eat sweets?",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "daily", "text": "Каждый день", "text_uz": "Har kuni", "text_en": "Daily" },
+                { "id": "sometimes", "text": "Время от времени", "text_uz": "Vaqti-vaqti bilan", "text_en": "Sometimes" },
+                { "id": "avoid", "text": "Стараюсь избегать", "text_uz": "Qochishga harakat qilaman", "text_en": "Try to avoid" }
+            ],
+            "order": 7
+        },
+        {
+            "id": "activity_type",
+            "section": "Образ жизни",
+            "section_uz": "Turmush tarzi",
+            "section_en": "Lifestyle",
+            "label": "Опишите ваш уровень подвижности:",
+            "label_uz": "Harakat darajangizni tasvirlang:",
+            "label_en": "Describe your activity level:",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "high", "text": "Интенсивные тренировки", "text_uz": "Intensiv mashg'ulotlar", "text_en": "Intense workouts" },
+                { "id": "moderate", "text": "Умеренная нагрузка", "text_uz": "O'rtacha yuklama", "text_en": "Moderate load" },
+                { "id": "low", "text": "Сидячий образ жизни", "text_uz": "Kam harakatli", "text_en": "Sedentary lifestyle" }
+            ],
+            "order": 8
+        },
+        {
+            "id": "caffeine",
+            "section": "Привычки",
+            "section_uz": "Odatlar",
+            "section_en": "Habits",
+            "label": "Ваши отношения с кофеином:",
+            "label_uz": "Kofein bilan munosabatingiz:",
+            "label_en": "Your relationship with caffeine:",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "heavy", "text": "Несколько порций в день", "text_uz": "Kuniga bir necha marta", "text_en": "Several cups daily" },
+                { "id": "daily", "text": "Одна чашка в день", "text_uz": "Kuniga bir finjon", "text_en": "One cup daily" },
+                { "id": "none", "text": "Обхожусь без кофе", "text_uz": "Kofesiz", "text_en": "No coffee" }
+            ],
+            "order": 9
+        },
+        {
+            "id": "smoking",
+            "section": "Привычки",
+            "section_uz": "Odatlar",
+            "section_en": "Habits",
+            "label": "Курите ли вы?",
+            "label_uz": "Chekasizmi?",
+            "label_en": "Do you smoke?",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "yes", "text": "Да", "text_uz": "Ha", "text_en": "Yes" },
+                { "id": "no", "text": "Нет", "text_uz": "Yo'q", "text_en": "No" }
+            ],
+            "order": 10
+        },
+        {
+            "id": "sleep_quality",
+            "section": "Энергия",
+            "section_uz": "Energiya",
+            "section_en": "Energy",
+            "label": "Как обстоят дела со сном?",
+            "label_uz": "Uyquingiz qanday?",
+            "label_en": "How is your sleep?",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "good", "text": "Сплю крепко", "text_uz": "Yaxshi uxlash", "text_en": "Sleep soundly" },
+                { "id": "insomnia", "text": "Бессонница / сложности", "text_uz": "Uyqusizlik", "text_en": "Insomnia / difficulties" }
+            ],
+            "order": 11
+        },
+        {
+            "id": "female_cycle",
+            "section": "Здоровье",
+            "section_uz": "Salomatlik",
+            "section_en": "Health",
+            "label": "Насколько регулярен ваш цикл?",
+            "label_uz": "Siklingiz qanchalik muntazam?",
+            "label_en": "How regular is your cycle?",
+            "type": "options",
+            "gender": "female",
+            "options": [
+                { "id": "regular", "text": "Стабильный", "text_uz": "Barqaror", "text_en": "Regular" },
+                { "id": "irregular", "text": "Нерегулярный", "text_uz": "Muntazam emas", "text_en": "Irregular" },
+                { "id": "menopause", "text": "Менопауза / Беременность", "text_uz": "Menopauza / Homiladorlik", "text_en": "Menopause / Pregnancy" }
+            ],
+            "order": 12
+        },
+        {
+            "id": "meds",
+            "section": "Медицина",
+            "section_uz": "Tibbiyot",
+            "section_en": "Medical",
+            "label": "Принимаете ли медикаменты постоянно?",
+            "label_uz": "Doimiy dori ichasizmi?",
+            "label_en": "Do you take meds constantly?",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "yes", "text": "Да", "text_uz": "Ha", "text_en": "Yes" },
+                { "id": "no", "text": "Нет", "text_uz": "Yo'q", "text_en": "No" }
+            ],
+            "order": 13
+        },
+        {
+            "id": "source",
+            "section": "О нас",
+            "section_uz": "Biz haqimizda",
+            "section_en": "About us",
+            "label": "Откуда вы узнали о HESSA?",
+            "label_uz": "HESSA haqida qayerdan bildingiz?",
+            "label_en": "Where did you hear about HESSA?",
+            "type": "options",
+            "gender": "both",
+            "options": [
+                { "id": "friend", "text": "Порекомендовал человек", "text_uz": "Tanishim", "text_en": "Recommended by a person" },
+                { "id": "internet", "text": "Интернет", "text_uz": "Internet", "text_en": "Internet" }
+            ],
+            "order": 14
+        }
+    ]
+}

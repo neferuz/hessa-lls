@@ -1,0 +1,205 @@
+.section {
+    width: calc(100% - 4rem);
+    max-width: 1400px;
+    padding: 100px 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #F6EBED 100%);
+    border-radius: 48px;
+    margin: 2rem auto;
+    box-shadow: none; /* Shadow removed as requested */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header - Reverting to Original Centered Desktop */
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.stepTag {
+    display: none; /* FAQ tag was NOT in the original desktop design */
+}
+
+.title {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Accordion */
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border-bottom: 1px solid rgba(196, 151, 160, 0.2);
+}
+
+.item:first-child {
+    border-top: 1px solid rgba(196, 151, 160, 0.2);
+}
+
+/* Button */
+.questionButton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    transition: padding 0.3s ease;
+}
+
+.questionHeader {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+.number {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1rem;
+    color: #C497A0;
+    font-weight: 600;
+    min-width: 30px;
+}
+
+.questionText {
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    transition: padding-left 0.3s ease;
+}
+
+.iconCircle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C497A0;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid rgba(196, 151, 160, 0.5);
+    border-radius: 50%;
+}
+
+.active .iconCircle {
+    transform: rotate(180deg);
+    background: #C497A0;
+    color: white;
+    border-color: #C497A0;
+}
+
+/* Answer */
+.answerContent {
+    padding-bottom: 2.5rem;
+}
+
+.answerInner {
+    padding-left: calc(30px + 2rem);
+    font-family: var(--font-evolventa), sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 800px;
+}
+
+/* RESPONSIVE - Preserving Mobile Fixes */
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+        padding: 40px 1.5rem;
+        margin: 1rem auto;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .header {
+        text-align: left;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .stepTag {
+        display: flex; /* Keep the FAQ tag only on mobile */
+        font-family: var(--font-evolventa), sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #C497A0;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 0.5rem;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .stepTag::after {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background: #C497A0;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .questionButton {
+        padding: 1.5rem 0;
+    }
+
+    .questionHeader {
+        gap: 1rem;
+    }
+
+    .number {
+        font-size: 0.8rem;
+    }
+
+    .questionText {
+        font-size: 1.1rem;
+    }
+
+    .answerInner {
+        padding-left: 0;
+        padding-top: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .iconCircle {
+        width: 32px;
+        height: 32px;
+    }
+}
