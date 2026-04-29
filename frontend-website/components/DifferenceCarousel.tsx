@@ -16,7 +16,7 @@ export default function DifferenceCarousel() {
     const [lang, setLang] = useState("RU");
     const [isPaused, setIsPaused] = useState(false);
 
-    const API_BASE_URL = "http://127.0.0.1:8000";
+    const API_BASE_URL = "https://api.hessa.uz";
 
     const getImageUrl = (img: any) => {
         let url = img;

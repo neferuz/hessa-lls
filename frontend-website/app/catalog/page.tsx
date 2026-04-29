@@ -87,7 +87,7 @@ export default function CatalogPage() {
     const getImageUrl = (url: string | undefined) => {
         if (!url) return "/placeholder-product.png";
         if (url.startsWith("http")) return url;
-        if (url.startsWith("/static")) return `http://127.0.0.1:8000${url}`;
+        if (url.startsWith("/static")) return `https://api.hessa.uz${url}`;
         return url;
     };
 

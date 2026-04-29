@@ -14,7 +14,7 @@ export default function NewArrivals() {
     const [products, setProducts] = useState<any[]>([]);
     const [categories, setCategories] = useState<string[]>(["Все"]);
 
-    const API_BASE_URL = "http://127.0.0.1:8000";
+    const API_BASE_URL = "https://api.hessa.uz";
 
     const getImageUrl = (img: any) => {
         let url = img;

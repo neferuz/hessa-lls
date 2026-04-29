@@ -357,9 +357,9 @@ export default function ProfilePage() {
     const getFileUrl = (url: string | null) => {
         if (!url) return '';
         if (url.startsWith('http')) return url;
-        if (url.startsWith('/static')) return `http://127.0.0.1:8000${url}`;
+        if (url.startsWith('/static')) return `https://api.hessa.uz${url}`;
         const clean = url.startsWith('/') ? url.slice(1) : url;
-        return `http://127.0.0.1:8000/static/${clean}`;
+        return `https://api.hessa.uz/static/${clean}`;
     };
 
     // Listen for language changes
@@ -399,12 +399,12 @@ export default function ProfilePage() {
 
         // If it already starts with /static, just prepend host
         if (url.startsWith("/static")) {
-            return `http://127.0.0.1:8000${url}`;
+            return `https://api.hessa.uz${url}`;
         }
 
         // Otherwise assume it's a file in backend/static and needs /static prefix
         const cleanPath = url.startsWith("/") ? url.slice(1) : url;
-        return `http://127.0.0.1:8000/static/${cleanPath}`;
+        return `https://api.hessa.uz/static/${cleanPath}`;
     };
 
     // Lock scroll when modal is open

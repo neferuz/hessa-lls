@@ -48,7 +48,7 @@ export default function ReviewsBlock() {
         desc_en: "Real reviews from customers who have already improved their well-being with us.",
     });
 
-    const API_BASE_URL = "http://127.0.0.1:8000";
+    const API_BASE_URL = "https://api.hessa.uz";
 
     useEffect(() => {
         const fetchContent = async () => {
