@@ -48,7 +48,7 @@ next-env.d.ts
 
 # Local databases
 *.db
-*.lls
+# *.lls  — removed to allow hessa.lls database
 backend/backend.log
 **/node_modules/
 **/.next/
